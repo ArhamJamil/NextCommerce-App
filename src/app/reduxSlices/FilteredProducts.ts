@@ -24,7 +24,7 @@ export const FetchFilterProducts = createAsyncThunk(
         console.log(categories)
       
         const fetchPromises = categories.map(async (category:any) => {
-            const response = await fetch(`http://localhost:3000/api/getCategories?category=${category}`, {
+            const response = await fetch(`/api/getCategories?category=${category}`, {
                 method: 'GET',
             })
             return await response.json()

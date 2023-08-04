@@ -24,7 +24,7 @@ export const loginUser = createAsyncThunk(
     'user/login', // Title of function
     async (userData: { email: string; password: string }) => {
         try {
-            const response = await fetch('http://localhost:3000/api/UserLogin', {
+            const response = await fetch('/api/UserLogin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
