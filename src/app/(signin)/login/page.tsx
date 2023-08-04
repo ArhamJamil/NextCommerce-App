@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const page = () => {
+const Page = () => {
 
     const router = useRouter()
     let user = useAppSelector((state) => state.signIn.value)
@@ -163,4 +163,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -3,7 +3,7 @@ import React from 'react'
 import { useAppDispatch, useAppSelector } from '@/app/reduxHooks/hooks';
 import { } from '@/app/reduxSlices/CartSlice';
 
-const page = () => {
+const Page = () => {
 
     const cartItem = useAppSelector((state) => state.CartItem.cartItems)
     console.log(cartItem)
@@ -31,9 +31,9 @@ const page = () => {
                                     <div className="flow-root">
                                         <ul className="-my-8">
                                             {cartItem.length === 0 ? (<p>Your cart is empty</p>) :
-                                                cartItem.map((item: any) => {
+                                                cartItem.map((item: any , index:any) => {
                                                     return (
-                                                        <li className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
+                                                        <li key={index} className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
                                                             <div className="shrink-0">
                                                                 <img className="h-24 w-18 max-w-full rounded-lg object-cover object-center" src={`${item.thumbnail}`} alt="" />
                                                             </div>
@@ -109,4 +109,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

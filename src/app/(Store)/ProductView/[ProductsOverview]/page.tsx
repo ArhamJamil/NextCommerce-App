@@ -21,7 +21,7 @@ interface ProductQuery {
 
 
 
-const page = ({ params }: { params: { ProductsOverview: string } }) => {
+const Page = ({ params }: { params: { ProductsOverview: string } }) => {
   // console.log(params)
   const dispatch = useAppDispatch()
   const SearchParams = useSearchParams();
@@ -45,7 +45,12 @@ const page = ({ params }: { params: { ProductsOverview: string } }) => {
   const handleAddToCart = async () => {
    
     const token = await getCookie('UserAuth')
-   await dispatch(addCartItems({Prods, token}))
+    if (token) {
+      await dispatch(addCartItems({Prods, token}))
+    }else{
+      router.push('/login')
+    }
+
   };
 
   const handleToggleSection = () => {
@@ -354,4 +359,4 @@ const page = ({ params }: { params: { ProductsOverview: string } }) => {
   )
 }
 
-export default page
+export default Page

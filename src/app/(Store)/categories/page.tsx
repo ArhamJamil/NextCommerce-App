@@ -8,7 +8,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 
 
-const page = () => {
+const Page = () => {
 
     const router = useRouter()
     const searchParams = useSearchParams()
@@ -145,7 +145,7 @@ const page = () => {
 
 
                 <div className="w-full py-20 md:w-3/4my-2 flex flex-wrap gap-x-4 gap-y-10  justify-around md:justify-normal">
-                    { }
+
 
                     {productsToRender ?
                         filteredProducts.map((product: any, index: number) => (
@@ -167,4 +167,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

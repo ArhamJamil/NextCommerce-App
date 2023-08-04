@@ -6,7 +6,7 @@ import { registerUser, setUseremail, setUsername, setUserpassword } from '../../
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const page = () => {
+const Page = () => {
     const router = useRouter()
     let user = useAppSelector((state) => state.signUp.value)
     let isLoading = useAppSelector((state) => state.signUp.isLoading)
@@ -159,4 +159,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

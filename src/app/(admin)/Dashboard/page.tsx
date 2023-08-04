@@ -3,7 +3,7 @@ import DashboardSideBar from '../components/DashboardSideBar'
 import ProductDetails from '../components/ProductDetails'
 
 
-const page = () => {
+const Page = () => {
     return (
         <>
             {/* <!-- Sidebar --> */}
@@ -131,4 +131,4 @@ const page = () => {
         </>
     )
 }
-export default page
+export default Page

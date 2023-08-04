@@ -15,7 +15,7 @@ export default function Home() {
       await dispatch(getCartItems({token}))
     }
     cartItemsGetter()
-  },[])
+  },[dispatch])
 
   return (
     <>
